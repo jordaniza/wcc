@@ -161,22 +161,6 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Experience Section */}
-        <section id="experience" className="py-16 md:py-24 bg-secondary/10">
-          <div className="container">
-            <div className="flex flex-col items-center text-center mb-12">
-              <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
-                Experience & Expertise
-              </h2>
-              <p className="mt-4 max-w-2xl text-muted-foreground">
-                Kristian has provided chiropractic and medical support for a
-                wide range of athletes, teams, and organizations.
-              </p>
-            </div>
-            <ExperienceGallery />
-          </div>
-        </section>
-
         {/* Specializations Section */}
         <section id="specializations" className="py-16 md:py-24">
           <div className="container">
@@ -201,6 +185,22 @@ export default function Home() {
                 <ChevronRight className="ml-1 h-4 w-4" />
               </Button>
             </Link>
+          </div>
+        </section>
+
+        {/* Experience Section */}
+        <section id="experience" className="py-16 md:py-24 bg-secondary/10">
+          <div className="container">
+            <div className="flex flex-col items-center text-center mb-12">
+              <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
+                Experience & Expertise
+              </h2>
+              <p className="mt-4 max-w-2xl text-muted-foreground">
+                Kristian has provided chiropractic and medical support for a
+                wide range of athletes, teams, and organizations.
+              </p>
+            </div>
+            <ExperienceGallery />
           </div>
         </section>
 
