@@ -161,6 +161,102 @@ export default function Home() {
           </div>
         </section>
 
+        {/* Experience Section */}
+        <section id="experience" className="py-16 md:py-24 bg-secondary/10">
+          <div className="container">
+            <div className="flex flex-col items-center text-center mb-12">
+              <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
+                Experience & Expertise
+              </h2>
+              <p className="mt-4 max-w-2xl text-muted-foreground">
+                Kristian has provided chiropractic and medical support for a
+                wide range of athletes, teams, and organizations.
+              </p>
+            </div>
+            <ExperienceGallery />
+          </div>
+        </section>
+
+        {/* Specializations Section */}
+        <section id="specializations" className="py-16 md:py-24">
+          <div className="container">
+            <div className="flex flex-col items-center text-center mb-12">
+              <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
+                What He Treats
+              </h2>
+              <p className="mt-4 max-w-2xl text-muted-foreground">
+                Dr. Frantzen specializes in a range of chiropractic services to
+                help you move better and live pain-free.
+              </p>
+            </div>
+          </div>
+          <ServicesGallery />
+          <div className="container mt-12 flex justify-center">
+            <Link href={bookingUrl} target="_blank" rel="noopener noreferrer">
+              <Button
+                size="lg"
+                className="bg-primary text-foreground hover:bg-primary/80"
+              >
+                Book Your Consultation
+                <ChevronRight className="ml-1 h-4 w-4" />
+              </Button>
+            </Link>
+          </div>
+        </section>
+
+        {/* Certifications Section */}
+        <section id="certifications" className="py-16 md:py-24 bg-secondary/10">
+          <div className="container">
+            <div className="flex flex-col items-center text-center mb-12">
+              <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
+                Treatment Methods & Certifications
+              </h2>
+              <p className="mt-4 max-w-2xl text-muted-foreground">
+                Kristian integrates a variety of advanced techniques to deliver
+                personalized care.
+              </p>
+            </div>
+            <div className="grid gap-4 sm:grid-cols-2 md:grid-cols-3">
+              {[
+                "Active Release Techniques® (ART)",
+                "Graston Technique®",
+                "NeuroKinetic Therapy® (Level 3)",
+                "Titleist Performance Institute® Training",
+                "Dry Needling & Myofascial Release",
+                "Joint Manipulation & Mobilization",
+                "Complete Concussion Management",
+                "Taping (Levels 1 & 2)",
+              ].map((cert, index) => (
+                <div
+                  key={index}
+                  className="flex items-center gap-3 rounded-lg border bg-white p-4 shadow-sm"
+                >
+                  <div className="flex h-8 w-8 items-center justify-center rounded-full bg-secondary/20">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      className="h-4 w-4 text-primary"
+                    >
+                      <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+                      <polyline points="22 4 12 14.01 9 11.01" />
+                    </svg>
+                  </div>
+                  <span className="text-sm font-medium text-foreground">
+                    {cert}
+                  </span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
         {/* Why Work With Kristian Section */}
         <section className="py-16 md:py-24 bg-secondary/10">
           <div className="container">
@@ -233,102 +329,6 @@ export default function Home() {
                     </h3>
                   </div>
                   <p className="text-sm text-foreground">{item.description}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Experience Section */}
-        <section id="experience" className="py-16 md:py-24 bg-secondary/10">
-          <div className="container">
-            <div className="flex flex-col items-center text-center mb-12">
-              <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
-                Experience & Expertise
-              </h2>
-              <p className="mt-4 max-w-2xl text-muted-foreground">
-                Kristian has provided chiropractic and medical support for a
-                wide range of athletes, teams, and organizations.
-              </p>
-            </div>
-            <ExperienceGallery />
-          </div>
-        </section>
-
-        {/* Specializations Section */}
-        <section id="specializations" className="py-16 md:py-24">
-          <div className="container">
-            <div className="flex flex-col items-center text-center mb-12">
-              <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
-                What He Treats
-              </h2>
-              <p className="mt-4 max-w-2xl text-muted-foreground">
-                Dr. Frantzen specializes in a range of treatments to help you
-                move better and live pain-free.
-              </p>
-            </div>
-          </div>
-          <ServicesGallery />
-          <div className="container mt-12 flex justify-center">
-            <Link href={bookingUrl} target="_blank" rel="noopener noreferrer">
-              <Button
-                size="lg"
-                className="bg-primary text-foreground hover:bg-primary/80"
-              >
-                Book Your Consultation
-                <ChevronRight className="ml-1 h-4 w-4" />
-              </Button>
-            </Link>
-          </div>
-        </section>
-
-        {/* Certifications Section */}
-        <section id="certifications" className="py-16 md:py-24 bg-secondary/10">
-          <div className="container">
-            <div className="flex flex-col items-center text-center mb-12">
-              <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
-                Treatment Methods & Certifications
-              </h2>
-              <p className="mt-4 max-w-2xl text-muted-foreground">
-                Kristian integrates a variety of advanced techniques to deliver
-                personalized care.
-              </p>
-            </div>
-            <div className="grid gap-4 sm:grid-cols-2 md:grid-cols-3">
-              {[
-                "Active Release Techniques® (ART)",
-                "Graston Technique®",
-                "NeuroKinetic Therapy® (Level 3)",
-                "Titleist Performance Institute® Training",
-                "Dry Needling & Myofascial Release",
-                "Joint Manipulation & Mobilization",
-                "Complete Concussion Management",
-                "Taping (Levels 1 & 2)",
-              ].map((cert, index) => (
-                <div
-                  key={index}
-                  className="flex items-center gap-3 rounded-lg border bg-white p-4 shadow-sm"
-                >
-                  <div className="flex h-8 w-8 items-center justify-center rounded-full bg-secondary/20">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      className="h-4 w-4 text-primary"
-                    >
-                      <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
-                      <polyline points="22 4 12 14.01 9 11.01" />
-                    </svg>
-                  </div>
-                  <span className="text-sm font-medium text-foreground">
-                    {cert}
-                  </span>
                 </div>
               ))}
             </div>
