@@ -18,6 +18,41 @@ import { Map } from "@/components/map";
 import { ExperienceGallery } from "@/components/experience-gallery";
 import { LeafletCSS } from "@/components/leaflet-css";
 
+export const metadata = {
+  title: "West Coast Chiropractic and Sport Therapy",
+  description:
+    "Dr. Kristian Frantzen provides expert chiropractic care in Richmond, BC — helping people move better, recover faster, and perform at their best.",
+  keywords: [
+    "chiropractic",
+    "sports therapy",
+    "Richmond BC chiropractor",
+    "Dr. Kristian Frantzen",
+    "athlete recovery",
+    "manual therapy",
+  ],
+  openGraph: {
+    title: "West Coast Chiropractic and Sport Therapy",
+    description:
+      "Expert chiropractic care in Richmond, BC — helping athletes and active individuals feel their best.",
+    url: "https://yourdomain.com",
+    siteName: "West Coast Chiropractic",
+    images: [
+      {
+        url: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Asset%201%404x-8-ST9fBIi4lY5D6CPsdulgdGJBRpY64Y.png", // Optional OG image
+        width: 1200,
+        height: 630,
+        alt: "West Coast Chiropractic",
+      },
+    ],
+    locale: "en_CA",
+    type: "website",
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+};
+
 // At the beginning of your Home component
 export default function Home() {
   // Dr. Frantzen's actual booking URL
@@ -113,6 +148,7 @@ export default function Home() {
           </div>
         </section>
         {/* About Section */}
+
         <section id="about" className="py-4 sm:py-8 md:py-24">
           <div className="container">
             <div className="grid gap-12 lg:grid-cols-2 lg:gap-8 items-center">
@@ -146,8 +182,26 @@ export default function Home() {
                     MBA. His expertise in performance-based care is further
                     enhanced by advanced training in sport chiropractic.
                   </p>
+
+                  {/* Mobile-only Book Appointment Button */}
+                  <div className="pt-4 sm:hidden">
+                    <Link
+                      href={bookingUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <Button
+                        size="lg"
+                        className="w-full text-base bg-primary text-foreground hover:bg-primary/80"
+                      >
+                        Book Your Appointment
+                        <Calendar className="ml-2 h-5 w-5" />
+                      </Button>
+                    </Link>
+                  </div>
                 </div>
               </div>
+
               <div className="relative h-[600px] overflow-hidden rounded-lg">
                 <Image
                   src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/DSC_7162-8BRDlNiCbC6RJh3owaBfqrqYkrakGK.jpeg"
