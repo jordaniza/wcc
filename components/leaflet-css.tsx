@@ -26,6 +26,20 @@ export function LeafletCSS() {
       .leaflet-container {
         z-index: 1 !important;
       }
+      .wcc-map-label {
+        background: #111111;
+        border: 0;
+        border-radius: 4px;
+        box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
+        color: #ffffff;
+        font-size: 12px;
+        font-weight: 700;
+        line-height: 1;
+        padding: 6px 8px;
+      }
+      .wcc-map-label::before {
+        border-top-color: #111111;
+      }
       
       /* Ensure images maintain aspect ratio */
       .aspect-preserve {
@@ -66,4 +80,3 @@ export function LeafletCSS() {
 
   return null
 }
-

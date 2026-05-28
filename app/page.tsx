@@ -475,8 +475,20 @@ export default function Home() {
                   {[
                     {
                       icon: MapPin,
-                      title: "Location",
-                      content: "1200 Douglas Crescent, Richmond, BC V7B 1E7",
+                      title: "Locations",
+                      content: (
+                        <>
+                          <span className="block">
+                            1200 Douglas Crescent, Richmond, BC V7B 1E7
+                          </span>
+                          <span className="mt-1 block text-sm text-muted-foreground">
+                            Call/text/e-mail to book at this location.
+                          </span>
+                          <span className="mt-3 block">
+                            11151 Horseshoe Way Unit 24, Richmond, BC V7A 4S5
+                          </span>
+                        </>
+                      ),
                     },
                     {
                       icon: Phone,
